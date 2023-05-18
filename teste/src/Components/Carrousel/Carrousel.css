@@ -1,0 +1,12 @@
+.container-carousel {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-carousel img{
+    width: auto;
+    height: 250px;
+    align-items: center;
+}
+
