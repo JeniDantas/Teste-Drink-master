@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import  './Rodape.css';
+import './Rodape.css';
 
 const Rodape = () => {
   const [extraInfo, setExtraInfo] = useState(false);

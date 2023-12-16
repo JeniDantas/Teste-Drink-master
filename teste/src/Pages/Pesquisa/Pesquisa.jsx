@@ -2,10 +2,10 @@ import React from "react";
 import "./Pesquisa.css";
 
 
-function Pesquisa (){
+function Pesquisa() {
     return (
         <div className="container">
-        
+
         </div>
     );
 }
