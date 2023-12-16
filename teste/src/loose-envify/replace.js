@@ -11,7 +11,7 @@ function replace(src, envs) {
   }
 
   var out = [];
-  var purge = envs.some(function(env) {
+  var purge = envs.some(function (env) {
     return env._ && env._.indexOf('purge') !== -1;
   });
 
@@ -19,17 +19,17 @@ function replace(src, envs) {
   var parts = src.match(jsTokens);
 
   for (var i = 0; i < parts.length; i++) {
-    if (parts[i    ] === 'process' &&
-        parts[i + 1] === '.' &&
-        parts[i + 2] === 'env' &&
-        parts[i + 3] === '.') {
+    if (parts[i] === 'process' &&
+      parts[i + 1] === '.' &&
+      parts[i + 2] === 'env' &&
+      parts[i + 3] === '.') {
       var prevCodeToken = getAdjacentCodeToken(-1, parts, i);
       var nextCodeToken = getAdjacentCodeToken(1, parts, i + 4);
       var replacement = getReplacementString(envs, parts[i + 4], purge);
       if (prevCodeToken !== '.' &&
-          nextCodeToken !== '.' &&
-          nextCodeToken !== '=' &&
-          typeof replacement === 'string') {
+        nextCodeToken !== '.' &&
+        nextCodeToken !== '=' &&
+        typeof replacement === 'string') {
         out.push(replacement);
         i += 4;
         continue;

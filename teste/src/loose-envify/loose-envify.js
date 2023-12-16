@@ -6,7 +6,7 @@ var replace = require('./replace');
 
 var jsonExtRe = /\.json$/;
 
-module.exports = function(rootEnv) {
+module.exports = function (rootEnv) {
   rootEnv = rootEnv || process.env;
   return function (file, trOpts) {
     if (jsonExtRe.test(file)) {
@@ -24,12 +24,12 @@ function LooseEnvify(envs) {
 }
 util.inherits(LooseEnvify, stream.Transform);
 
-LooseEnvify.prototype._transform = function(buf, enc, cb) {
+LooseEnvify.prototype._transform = function (buf, enc, cb) {
   this._data += buf;
   cb();
 };
 
-LooseEnvify.prototype._flush = function(cb) {
+LooseEnvify.prototype._flush = function (cb) {
   var replaced = replace(this._data, this._envs);
   this.push(replaced);
   cb();

@@ -1,4 +1,4 @@
-.Container_DetailsDrink{
+.Container_DetailsDrink {
     background: #fff;
     width: 25vw;
     height: 70vh;
@@ -10,51 +10,59 @@
     animation: float 3s ease-in-out infinite;
 }
 
-.background_drink{
+.background_drink {
     width: 30%;
     height: 6rem;
     justify-content: center;
     display: flex;
     border-bottom: 150px solid #38b69bc2;
     border-left: 100px solid transparent;
-    border-right: 100px solid transparent;   
+    border-right: 100px solid transparent;
 }
 
-.img_details_drink{
+.img_details_drink {
     position: relative;
     display: flex;
-    justify-content: center;   
+    justify-content: center;
 }
-.img_drink{
+
+.img_drink {
     position: absolute;
     margin-top: 14px;
     filter: drop-shadow(3px 9px 20px rgb(255, 255, 255));
 }
-.line{
-   height: 1px;
-   width: 19rem;
-   background:var(--dark-purple-color);
-   margin:  0 0 10px 17px;
+
+.line {
+    height: 1px;
+    width: 19rem;
+    background: var(--dark-purple-color);
+    margin: 0 0 10px 17px;
 }
-.details-drink{
+
+.details-drink {
     position: relative;
     top: 40px;
 }
-.model-drink, .price-drink{
+
+.model-drink,
+.price-drink {
     display: flex;
     flex-direction: row;
     padding: 10px 0 0 20px;
 }
-.title-price-model{
+
+.title-price-model {
     color: var(--dark-purple-color);
     font-weight: 900;
 }
-.title-details-drink{
+
+.title-details-drink {
     padding: 17px;
     color: #fff;
     letter-spacing: 4px;
 }
-.btn-details-drink{
+
+.btn-details-drink {
     display: flex;
     margin: 0 auto;
     height: 2.1rem;
@@ -64,8 +72,8 @@
     border: 3px solid #331183;
     letter-spacing: 2px;
     font-weight: 900;
-    color:var(--dark-purple-color); 
-    cursor: pointer; 
+    color: var(--dark-purple-color);
+    cursor: pointer;
     align-items: center;
     padding-bottom: 3px;
     justify-content: center;
@@ -73,17 +81,19 @@
     text-transform: uppercase;
     font-size: 11.5px;
 }
-.btn-details-drink:hover{
+
+.btn-details-drink:hover {
     color: #fff;
     background: var(--aquamarine-color);
     border: 3px solid var(--aquamarine-color);
     transform: scale(1.1);
     transition: 0.5s;
 }
-.Footer_Details{
+
+.Footer_Details {
     width: 80%;
     height: 22%;
-    background-image: linear-gradient(to right, #331183 , #5f24cc);
+    background-image: linear-gradient(to right, #331183, #5f24cc);
     position: absolute;
     bottom: -2.5rem;
     margin-left: 2.2rem;
@@ -91,20 +101,22 @@
     overflow-y: scroll;
     box-shadow: 3px 3px 15px rgba(79, 43, 95, 0.562);
 }
-.text-drink-details{
-    text-align:left;
+
+.text-drink-details {
+    text-align: left;
     padding: 0 20px 0 19px;
     color: #000000ad;
-    
+
 }
 
-@keyframes float{
-    0%, 100%{
+@keyframes float {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
-    50%{
+
+    50% {
         transform: translateY(-8px);
     }
 }
-
-  
